@@ -6,6 +6,10 @@ const nextConfig = {
                 protocol:"https",
                 hostname:"randomuser.me",
             },
+            {
+                protocol: "https",
+                hostname: "images.app.goo.gl", // Allow images from Google Photos shortened URLs
+            },
         ],
     },
 };

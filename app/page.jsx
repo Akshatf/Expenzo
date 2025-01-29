@@ -33,7 +33,7 @@ export default function Home() {
       <section className="py-20 ">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold text-center mb-12">
-            Everything you need to manage your finances
+            Everything you need to manage your expenses
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {featuresData.map((feature, index) => (
@@ -102,11 +102,11 @@ export default function Home() {
       <section className="py-20 bg-blue-600">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl font-bold text-white mb-4">
-            Ready to Take Control of Your Finances?
+            Ready to Take Control of Your Expenses?
           </h2>
           <p className="text-blue-100 mb-8 max-w-2xl mx-auto">
-            Join thousands of users who are already managing their finances
-            smarter with Welth
+            Join thousands of users who are already managing their expenses
+            smarter with Expenzo
           </p>
           <Link href="/dashboard">
             <Button
