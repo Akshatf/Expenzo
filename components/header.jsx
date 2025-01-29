@@ -10,7 +10,7 @@ const Header = () => {
       <nav className="container mx-autopx-4 py-4 flex items-center justify-between">
         <Link href="/">
           <Image
-            src={"/logo.png"}
+            src={"/IMG-20250127-WA0066-removebg-preview.png"}
             alt="Expenzo Logo"
             height={60}
             width={200}
