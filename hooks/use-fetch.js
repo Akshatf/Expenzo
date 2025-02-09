@@ -1,9 +1,8 @@
+import { useState } from "react";
 import { toast } from "sonner";
 
-const { useState } = require("react");
-
 const useFetch = (cb) => {
-  const [data, setData] = useFormState(undefined);
+  const [data, setData] = useState(undefined);
   const [loading, setLoading] = useState(null);
   const [error, setError] = useState(null);
 

@@ -100,7 +100,7 @@ export async function seedTransactions() {
 
     return {
       success: true,
-      message: `Created ${transactions.length} transactions`,
+      message: `Created ₹{transactions.length} transactions`,
     };
   } catch (error) {
     console.error("Error seeding transactions:", error);
