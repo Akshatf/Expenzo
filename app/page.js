@@ -13,7 +13,7 @@ import Link from "next/link";
 
 const LandingPage = () => {
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-white mt-40">
 
       <HeroSection />
 
