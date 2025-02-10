@@ -70,7 +70,7 @@ export async function createTransaction(data) {
     const newBalance = account.balance.toNumber() + balanceChange;
 
     // Create transaction and update account balance
-    const transaction = await db.$transaction(async (tx) => {
+    const transaction = await db.transaction(async (tx) => {
       const newTransaction = await tx.transaction.create({
         data: {
           ...data,
