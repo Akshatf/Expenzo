@@ -1,5 +1,3 @@
-"use client";
-
 import React from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
@@ -74,93 +72,36 @@ const LandingPage = () => {
       </section>
 
     
-      <section className="py-20">
+      <section id="testimonials" className="py-20">
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold text-center mb-12">
-            Whatt Our Users Say
+          <h2 className="text-3xl font-bold text-center mb-16">
+          Whatt our Users Say
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {testimonialsData.map((testimonial, index) => (
-              <div key={index} className="flip-card">
-                <div className="flip-card-inner">
-                  {/* Front Side */}
-                  <div className="flip-card-front">
-                    <Card className="p-6 h-full flex items-center justify-center shadow-lg">
-                      <CardContent className="text-center">
-                        <div className="transform transition-transform duration-500 hover:scale-110">
-                          <Image
-                            src={testimonial.image}
-                            alt={testimonial.name}
-                            width={80}
-                            height={80}
-                            className="rounded-full mx-auto mb-4"
-                          />
-                        </div>
-                        <div className="space-y-2">
-                          <div className="font-semibold text-xl">
-                            {testimonial.name}
-                          </div>
-                          <div className="text-sm text-gray-600">
-                            {testimonial.role}
-                          </div>
-                        </div>
-                      </CardContent>
-                    </Card>
+              <Card key={index} className="p-6">
+                <CardContent className="pt-4">
+                  <div className="flex items-center mb-4">
+                    <Image
+                      src={testimonial.image}
+                      alt={testimonial.name}
+                      width={40}
+                      height={40}
+                      className="rounded-full"
+                    />
+                    <div className="ml-4">
+                      <div className="font-semibold">{testimonial.name}</div>
+                      <div className="text-sm text-gray-600">
+                        {testimonial.role}
+                      </div>
+                    </div>
                   </div>
-
-                  {/* Back Side */}
-                  <div className="flip-card-back">
-                    <Card className="p-6 h-full flex items-center justify-center shadow-lg">
-                      <CardContent>
-                        <p className="text-gray-600 text-center">
-                          {testimonial.quote}
-                        </p>
-                      </CardContent>
-                    </Card>
-                  </div>
-                </div>
-              </div>
+                  <p className="text-gray-600">{testimonial.quote}</p>
+                </CardContent>
+              </Card>
             ))}
           </div>
         </div>
-
-        <style jsx>{`
-          .flip-card {
-            perspective: 1000px;
-            height: 290px; /* Adjust height as needed */
-          }
-
-          .flip-card-inner {
-            position: relative;
-            width: 100%;
-            height: 100%;
-            text-align: center;
-            transition: transform 0.8s ease-in-out;
-            transform-style: preserve-3d;
-          }
-
-          .flip-card:hover .flip-card-inner {
-            transform: rotateY(180deg);
-          }
-
-          .flip-card-front,
-          .flip-card-back {
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            backface-visibility: hidden;
-            border-radius: 8px;
-          }
-
-          .flip-card-front {
-            background: linear-gradient(135deg, #f3f4f6, #e5e7eb);
-          }
-
-          .flip-card-back {
-            transform: rotateY(180deg);
-            background: linear-gradient(135deg, #e5e7eb, #f3f4f6);
-          }
-        `}</style>
       </section>
 
       <section className="py-20 bg-blue-600">
